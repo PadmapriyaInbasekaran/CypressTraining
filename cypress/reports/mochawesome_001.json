@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-08T09:34:38.600Z",
+    "end": "2023-02-08T09:35:39.947Z",
+    "duration": 61347,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "60fa62bd-9315-4825-a55a-a38fd5d0949f",
+      "title": "",
+      "fullFile": "cypress\\integration\\OrangeHRM.cy.js",
+      "file": "cypress\\integration\\OrangeHRM.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c605a4b3-eb84-406b-a46d-3fa7c03dcebc",
+          "title": "OrangeHRM.com",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login to OrangeHRM!",
+              "fullTitle": "OrangeHRM.com Login to OrangeHRM!",
+              "timedOut": null,
+              "duration": 25425,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.getEnterUsernameTextBox().type(this.arg.userName);\nloginPage.getEnterUsernameTextBox().should(\"have.value\", this.arg.userName);\nloginPage.getEnterPwdTextBox().type(this.arg.pwd);\nloginPage.getEnterPwdTextBox().should(\"have.value\", this.arg.pwd);\nloginPage.getClickOnLoginButton().click();\ndashboardPage.getTopBarHeader().should(\"have.text\", \"Dashboard\");",
+              "err": {},
+              "uuid": "32111787-1e77-46f6-812c-ddd14e49f4e8",
+              "parentUUID": "c605a4b3-eb84-406b-a46d-3fa7c03dcebc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to Admin Tab and add User!",
+              "fullTitle": "OrangeHRM.com Navigate to Admin Tab and add User!",
+              "timedOut": null,
+              "duration": 30245,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.getEnterUsernameTextBox().type(this.arg.userName);\nloginPage.getEnterUsernameTextBox().should(\"have.value\", this.arg.userName);\nloginPage.getEnterPwdTextBox().type(this.arg.pwd);\nloginPage.getEnterPwdTextBox().should(\"have.value\", this.arg.pwd);\nloginPage.getClickOnLoginButton().click();\ndashboardPage.getTopBarHeader().should(\"have.text\", \"Dashboard\");\ndashboardPage.getAdminTab().click();\nadminPage.getTopBarHeader().should(\"have.text\", \"AdminUser Management\");\nadminPage.getClickOnAddButton().click();\nadminPage.getUserRoleSelectBox().click();\nadminPage.getEmployeeNameTextBox().type(this.arg.empname);\ncy.wait(5000);\nadminPage.getAutocompleteData().click();\nadminPage.getStatusSelectBox().click();\nadminPage.getUserNameTextBox().type(this.arg.username);\nadminPage.getEnterPwdTextBox().type(this.arg.password);\nadminPage.getEnterConfirmPasswordTextBox().type(this.arg.confirmPwd);\nadminPage.getSaveButton().click();\ncy.contains('Success').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Success' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Success' but never did.\n    at Context.eval (webpack:///./cypress/integration/OrangeHRM.cy.js:52:23)",
+                "diff": null
+              },
+              "uuid": "7daf4900-fa02-4fff-be77-11f5aead6b3a",
+              "parentUUID": "c605a4b3-eb84-406b-a46d-3fa7c03dcebc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32111787-1e77-46f6-812c-ddd14e49f4e8"
+          ],
+          "failures": [
+            "7daf4900-fa02-4fff-be77-11f5aead6b3a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 55670,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chats": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
