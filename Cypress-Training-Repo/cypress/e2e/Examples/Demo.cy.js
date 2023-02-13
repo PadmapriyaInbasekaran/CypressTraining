@@ -5,6 +5,7 @@ describe('AsertionsSuite', () => {
       cy.visit('https://demo.guru99.com/test/newtours/index.php')
 cy.log("Hi")
 cy.log("Hello")
+cy.log("Welcome")
         // cy.contains('get').click()
         // cy.get('#query-btn').should('be.visible')
         // // cy.get('#query-btn1').should('be.enabled')
