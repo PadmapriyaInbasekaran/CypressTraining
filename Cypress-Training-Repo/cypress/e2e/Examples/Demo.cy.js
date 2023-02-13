@@ -7,6 +7,7 @@ describe('AsertionsSuite', () => {
       cy.log("Hello")
       cy.log("Welcome")
       cy.visit("https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox")
+      cy.log("Hi")
         // cy.contains('get').click()
         // cy.get('#query-btn').should('be.visible')
         // // cy.get('#query-btn1').should('be.enabled')
